@@ -1,0 +1,22 @@
+// Created a font color theme for the web
+
+$primary-color: #00abeb;
+$secondary-color: #0bb634;
+$third-color: #da1feb;
+$font-color: #494c4f;
+$background-color: grey;
+
+h1{
+    color: $primary-color;
+}
+
+h2, h3, h4{
+    color: $font-color;
+}
+p{
+    color: $font-color;
+}
+
+html{
+    color: pink;
+}

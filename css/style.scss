@@ -1,6 +1,66 @@
-// Import partials here
-@import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
+@import "profile";
+@import "color";
+$background-color:  whitesmoke;
+
+// Set up the layout of the card by positioning the picture and details
+
+.main{
+    position: relative;
+    padding: 80px 80px 130px 100px;
+
+    .right-side{
+        position: absolute;
+        top: 180px;
+        right:650px;
+        width: 250px;
+        height: 300px;
+        padding: 10px;
+    }
+
+    .name-title-bottom{
+        position: absolute;
+        bottom: 0;
+        left: 100px;
+        padding: 30px 30px 30px 40px;
+        text-align: center;
+    }
+}
+
+// MIXINS FOR MEDIA QUERY
+
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+
+// Utilized background color in the nesting
+
+.main{
+
+    .right-side{
+        background-color: $background-color;
+        padding: 10px;
+        p{
+            font-size: 20px;
+        }
+    }
+}
 

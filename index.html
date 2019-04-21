@@ -1,16 +1,95 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Fun with Constructors!</title>
-	<script src="index.js"></script>
-</head>
-<body>
-	<h1>Assignment 3 new</h1>
-	<section class="template-hook">
-		Fill this section with the templated components
-	</section>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Fun with Constructors!</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script type="text/javascript">
+
+        $(function(){
+
+        const data =  [
+            {
+  "name": "Steve Smith",
+  "jobTitle": "Project Manage",
+  "Company": "Front End Dev Co",
+  "Experience": "3 years",
+  "School": "UW",
+  "Major": "Marketing",
+  "Email": "steve@fedc.com",
+  "LinkedInUrl": "steve.linkedinprofile.com"
+}, 
+{
+  "name": "Aaron Katz",
+  "jobTitle": "Full Stack Developer",
+  "Company": "Web Sites and More",
+  "Experience": "5 years",
+  "School": "SU",
+  "Major": "Computer Science",
+  "Email": "aaronNotMyEmail@uw.com",
+  "LinkedInUrl": "aaron.linkedinprofile.com"
+}, 
+{
+  "name": "Kyle Hendricks",
+  "jobTitle": "Starting Pitcher",
+  "Company": "Chicago Cubs",
+  "Experience": "12 years",
+  "School": "USC",
+  "Major": "Pitching",
+  "Email": "kyleH@cubs.com",
+  "LinkedInUrl": "kyle.linkedinprofile.com"
+},
+{
+  "name": "Michael Jordan",
+  "jobTitle": "Point Guard",
+  "Company": "Chicago Buls",
+  "Experience": "20 years",
+  "School": "UNC",
+  "Major": "Trash Talking",
+  "Email": "mJordan@bulls.com",
+  "LinkedInUrl": "mJordan.linkedinprofile.com"
+}
+];
+
+// document.getElementById("template-hook").innerHTML =
+// `
+// <h1>card (${data.length}</h1>
+// data will go here
+// <p> these were added</p>
+// `
+
+let dataHTML = data.map(function(el) {
+    return data =``;
+
+});
+$("#template-hook").append(dataHTML);
+});
+        
+        </script>
+    </head>
+    <body>
+        <!-- Assignment 3 -->
+        <main class="main">
+            <h1>Assignment 3 - class03 - JSON -sunday</h1>
+            <div id="template-hook">
+                    Fill this section with the templated components
+            </div>
+            <!-- <img class="profile-img" src=img/unsplash-headshot.jpg alt="profile picture">
+            <div class=name-title-bottom>
+                <h2>Steve Smith</h2>
+                <h4>Project Manager</h4>    
+            </div>    
+            <div class="right-side">         
+                <p>Company: FE Dev Co</p>
+                <p>Experience: 3 years</p>
+                <p>School: UW</p>
+                <p>Major: Marketing</p>
+                <p>Email: steve@fedc.com</p>
+                <p>steve.linkedinprofile.com</p>
+            </div>    -->
+
+        </main>
+    </body>
 </html>
