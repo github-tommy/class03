@@ -8,74 +8,76 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script type="text/javascript">
 
-        $(function(){
-
         const data =  [
             {
-  "name": "Steve Smith",
-  "jobTitle": "Project Manage",
-  "Company": "Front End Dev Co",
-  "Experience": "3 years",
-  "School": "UW",
-  "Major": "Marketing",
-  "Email": "steve@fedc.com",
-  "LinkedInUrl": "steve.linkedinprofile.com"
-}, 
-{
-  "name": "Aaron Katz",
-  "jobTitle": "Full Stack Developer",
-  "Company": "Web Sites and More",
-  "Experience": "5 years",
-  "School": "SU",
-  "Major": "Computer Science",
-  "Email": "aaronNotMyEmail@uw.com",
-  "LinkedInUrl": "aaron.linkedinprofile.com"
-}, 
-{
-  "name": "Kyle Hendricks",
-  "jobTitle": "Starting Pitcher",
-  "Company": "Chicago Cubs",
-  "Experience": "12 years",
-  "School": "USC",
-  "Major": "Pitching",
-  "Email": "kyleH@cubs.com",
-  "LinkedInUrl": "kyle.linkedinprofile.com"
-},
-{
-  "name": "Michael Jordan",
-  "jobTitle": "Point Guard",
-  "Company": "Chicago Buls",
-  "Experience": "20 years",
-  "School": "UNC",
-  "Major": "Trash Talking",
-  "Email": "mJordan@bulls.com",
-  "LinkedInUrl": "mJordan.linkedinprofile.com"
-}
-];
+            "name": "Steve Smith",
+            "jobTitle": "Project Manage",
+            "Company": "Front End Dev Co",
+            "Experience": "3 years",
+            "School": "UW",
+            "Major": "Marketing",
+            "Email": "steve@fedc.com",
+            "LinkedInUrl": "steve.linkedinprofile.com"
+            }, 
+            {
+            "name": "Aaron Katz",
+            "jobTitle": "Full Stack Developer",
+            "Company": "Web Sites and More",
+            "Experience": "5 years",
+            "School": "SU",
+            "Major": "Computer Science",
+            "Email": "aaronNotMyEmail@uw.com",
+            "LinkedInUrl": "aaron.linkedinprofile.com"
+            }, 
+            {
+            "name": "Kyle Hendricks",
+            "jobTitle": "Starting Pitcher",
+            "Company": "Chicago Cubs",
+            "Experience": "12 years",
+            "School": "USC",
+            "Major": "Pitching",
+            "Email": "kyleH@cubs.com",
+            "LinkedInUrl": "kyle.linkedinprofile.com"
+            },
+            {
+            "name": "Michael Jordan",
+            "jobTitle": "Point Guard",
+            "Company": "Chicago Buls",
+            "Experience": "20 years",
+            "School": "UNC",
+            "Major": "Trash Talking",
+            "Email": "mJordan@bulls.com",
+            "LinkedInUrl": "mJordan.linkedinprofile.com"
+            }
+            ];
 
-// document.getElementById("template-hook").innerHTML =
-// `
-// <h1>card (${data.length}</h1>
-// data will go here
-// <p> these were added</p>
-// `
+            function cardModule(card) {
+                return `
+                <div class="right-side">         
+                    <p>Company: ${data.Company}</p>
+                    <p>Experience: ${data.Experience}</p>
+                    <p>School: ${data.school}</p>
+                    <p>Major: ${data.Major}</p>
+                    <p>Email: ${data.Email}</p>
+                
+                </div> 
+                `
+            }
 
-let dataHTML = data.map(function(el) {
-    return data =``;
-
-});
-$("#template-hook").append(dataHTML);
-});
-        
+            document.getElementById("template-hook").innerHTML = `
+            <h1 class="main"> X</h1>
+            ${data.map(cardModule).join('')}
+`
         </script>
     </head>
     <body>
-        <!-- Assignment 3 -->
+    <!-- ASSIGNMENT 3 -->
         <main class="main">
-            <h1>Assignment 3 - class03 - JSON -sunday</h1>
+            <h1>Assignment 3 - class03 - JSON</h1>
             <div id="template-hook">
-                    Fill this section with the templated components
             </div>
+
+<!-- CLASS02 ASSIGMENT02 -->
             <!-- <img class="profile-img" src=img/unsplash-headshot.jpg alt="profile picture">
             <div class=name-title-bottom>
                 <h2>Steve Smith</h2>
