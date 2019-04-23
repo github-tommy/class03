@@ -8,91 +8,96 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script type="text/javascript">
 
+// ARRAY JSON
 
-$(document).ready(function () {
+            $(document).ready(function () {
 
-var data = [ 
-    {
-    "picture": "src=img/unsplash-headshot.jpg",
-    "name": "Steve Smith",
-    "jobTitle": "Project Manage",
-    "Company": "Front End Dev Co",
-    "Experience": "3 years",
-    "School": "UW",
-    "Major": "Marketing",
-    "Email": "steve@fedc.com",
-    "LinkedInUrl": "steve.linkedinprofile.com"
-    }, 
-    {
-    "picture": "src=img/unsplash-headshot.jpg",
-    "name": "Aaron Katz",
-    "jobTitle": "Full Stack Developer",
-    "Company": "Web Sites and More",
-    "Experience": "5 years",
-    "School": "SU",
-    "Major": "Computer Science",
-    "Email": "aaronNotMyEmail@uw.com",
-    "LinkedInUrl": "aaron.linkedinprofile.com"
-    }, 
-    {
-    "picture": "src=img/unsplash-headshot.jpg",
-    "name": "Kyle Hendricks",
-    "jobTitle": "Starting Pitcher",
-    "Company": "Chicago Cubs",
-    "Experience": "12 years",
-    "School": "USC",
-    "Major": "Pitching",
-    "Email": "kyleH@cubs.com",
-    "LinkedInUrl": "kyle.linkedinprofile.com"
-    },
-    {
-        "picture": "src=img/unsplash-headshot.jpg",
-    "name": "Michael Jordan",
-    "jobTitle": "Point Guard",
-    "Company": "Chicago Buls",
-    "Experience": "20 years",
-    "School": "UNC",
-    "Major": "Trash Talking",
-    "Email": "mJordan@bulls.com",
-    "LinkedInUrl": "mJordan.linkedinprofile.com"
-    }
-    ];
+            var data = [ 
+                {
+                "picture": "src=img/unsplash-headshot.jpg",
+                "name": "Steve Smith",
+                "jobTitle": "Project Manage",
+                "Company": "Front End Dev Co",
+                "Experience": "3 years",
+                "School": "UW",
+                "Major": "Marketing",
+                "Email": "steve@fedc.com",
+                "LinkedInUrl": "steve.linkedinprofile.com"
+                }, 
+                {
+                "picture": "src=img/unsplash-headshot.jpg",
+                "name": "Aaron Katz",
+                "jobTitle": "Full Stack Developer",
+                "Company": "Web Sites and More",
+                "Experience": "5 years",
+                "School": "SU",
+                "Major": "Computer Science",
+                "Email": "aaronNotMyEmail@uw.com",
+                "LinkedInUrl": "aaron.linkedinprofile.com"
+                }, 
+                {
+                "picture": "src=img/unsplash-headshot.jpg",
+                "name": "Kyle Hendricks",
+                "jobTitle": "Starting Pitcher",
+                "Company": "Chicago Cubs",
+                "Experience": "12 years",
+                "School": "USC",
+                "Major": "Pitching",
+                "Email": "kyleH@cubs.com",
+                "LinkedInUrl": "kyle.linkedinprofile.com"
+                },
+                {
+                "picture": "src=img/unsplash-headshot.jpg",
+                "name": "Michael Jordan",
+                "jobTitle": "Point Guard",
+                "Company": "Chicago Buls",
+                "Experience": "20 years",
+                "School": "UNC",
+                "Major": "Trash Talking",
+                "Email": "mJordan@bulls.com",
+                "LinkedInUrl": "mJordan.linkedinprofile.com"
+                }
+                ];
+// TO INSERT PICTURE FOR EACH CARD
 
+            let pictureHTML = data.map(function(data) {
+                return data = `
+                <div class="name-title-bottom>">
+                    <img class="profile-img" ${data.picture}>
+                    <li class="data-name">${data.name}</li>
+                    <li class="data-jobTitle">${data.jobTitle}</li>
+                </div>
+                `
+            });    
 
+// TO INSERT DETAILS OF CARD INFO
 
-// $('.hook').html(data[1].name);
-let dataHTML = data.map(function(data) {
- return data = `
+            let dataHTML = data.map(function(data) {
+             return data = `
+                <div class="right-side">
+                    <li class="data-jobTitle">Company: ${data.Company}</li>
+                    <li class="data-name">School: ${data.School}</li>
+                    <li class="data-name">Experience: ${data.Experience}</li>
+                    <li class="data-jobTitle">School: ${data.School}</li>
+                    <li class="data-name">Major: ${data.Major}</li>
+                    <li class="data-jobTitle">Email: ${data.Email}</li>
+                    <li class="data-email">${data.LinkedInUrl}</li></div>
+                `
+            });
 
-    <div class="right-side">
-        <img class="profile-img" ${data.picture}>
-        <li class="data-name">Name: ${data.name}</li>
-        <li class="data-jobTitle">Job Title: ${data.jobTitle}</li>
-        <li class="data-jobTitle">Company: ${data.company}</li>
-        <li class="data-name">School: ${data.school}</li>
-        <li class="data-name">Experience: ${data.experience}</li>
-        <li class="data-jobTitle">School: ${data.school}</li>
-        <li class="data-name">Major: ${data.major}</li>
-        <li class="data-jobTitle">Email: ${data.email}</li>
-        <li class="data-email">LinkedIn: ${data.LinkedInUrl}</li></div>
-    `
-});
+// TO CREATE DIV/FORMATING
 
-$(".hook").append(dataHTML);
+            $(".hook").append(pictureHTML);
+            $(".hook").append(dataHTML);
 
-});
-
-
-
-        </script>
+            });
+    </script>
     </head>
     <body>
-    <!-- ASSIGNMENT 3 -->
         <main class="main">
-            <h1>Assignment 3</h1>
+            <h1>Assignment 3 - JSON</h1>
             <div class="hook">
             </div>
-
         </main>
     </body>
 </html>

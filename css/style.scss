@@ -6,21 +6,21 @@ $background-color:  whitesmoke;
 
 .main{
     position: relative;
-    // padding: 80px 80px 130px 100px;
+    padding: 80px 80px 130px 100px;
 
     .right-side{
         position: absolute;
         top: 180px;
-        right:650px;
+        right:1000px;
         width: 250px;
-        height: 300px;
+        height: 200px;
         padding: 10px;
     }
 
     .name-title-bottom{
         position: absolute;
         bottom: 0;
-        left: 100px;
+        left: 200px;
         padding: 30px 30px 30px 40px;
         text-align: center;
     }
@@ -57,7 +57,8 @@ $breakpoints: (
 
     .right-side{
         background-color: $background-color;
-        padding: 10px;
+        padding: 15px;
+        height: 140px;
         p{
             font-size: 20px;
         }
