@@ -2,7 +2,12 @@
 @import "color";
 $background-color:  whitesmoke;
 
+body{
+    background: lightblue
+}
+
 // Set up the layout of the card by positioning the picture and details
+
 
 .main{
     position: relative;
@@ -11,7 +16,7 @@ $background-color:  whitesmoke;
     .right-side{
         position: absolute;
         top: 180px;
-        right:1000px;
+        right:500px;
         width: 250px;
         height: 200px;
         padding: 10px;
