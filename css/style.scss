@@ -2,9 +2,9 @@
 @import "color";
 $background-color:  whitesmoke;
 
-body{
-    background: lightblue
-}
+// body{
+//     background: lightblue;
+// }
 
 // Set up the layout of the card by positioning the picture and details
 
@@ -12,13 +12,15 @@ body{
 .main{
     position: relative;
     padding: 80px 80px 130px 100px;
+    display: inline-block;
 
     .right-side{
-        position: absolute;
+        display: inline-block;
+        float: right;
         top: 180px;
         right:500px;
         width: 250px;
-        height: 200px;
+        height: 250px;
         padding: 10px;
     }
 
@@ -28,6 +30,7 @@ body{
         left: 200px;
         padding: 30px 30px 30px 40px;
         text-align: center;
+        display: inline-block;
     }
 }
 
@@ -62,8 +65,7 @@ $breakpoints: (
 
     .right-side{
         background-color: $background-color;
-        padding: 15px;
-        height: 140px;
+        // padding: 15px;
         p{
             font-size: 20px;
         }

@@ -73,30 +73,35 @@
 // TO INSERT DETAILS OF CARD INFO
 
             let dataHTML = data.map(function(data) {
-             return data = `
+             return data =`
                 <div class="right-side">
+                    <ul>
                     <li class="data-jobTitle">Company: ${data.Company}</li>
                     <li class="data-name">School: ${data.School}</li>
                     <li class="data-name">Experience: ${data.Experience}</li>
                     <li class="data-jobTitle">School: ${data.School}</li>
                     <li class="data-name">Major: ${data.Major}</li>
                     <li class="data-jobTitle">Email: ${data.Email}</li>
-                    <li class="data-email">${data.LinkedInUrl}</li></div>
+                    <li class="data-email">${data.LinkedInUrl}</li></ul><br></div>
                 `
             });
 
 // TO CREATE DIV/FORMATING
-
+            // console.log(dataHTML);
+            // debugger;
             $(".hook").append(pictureHTML);
-            $(".hook").append(dataHTML);
+            $(".hook2").append(dataHTML);
 
             });
     </script>
     </head>
     <body>
         <main class="main">
-            <h1>Assignment-03 - JSON</h1>
+            <h1>Assignment-03 - JSON testing</h1>
             <div class="hook">
+            </div>
+            <div class="hook2" style="height: 1000px">
+                
             </div>
         </main>
     </body>
